@@ -1,0 +1,54 @@
+body {
+    font-family: Arial;
+    background: linear-gradient(120deg, #1e3c72, #2a5298);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    border-radius: 10px;
+    width: 500px;
+    text-align: center;
+}
+
+input, button {
+    padding: 10px;
+    margin: 10px;
+    width: 80%;
+    border: none;
+    border-radius: 5px;
+}
+
+button {
+    background: #00c6ff;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0072ff;
+}
+
+.job-card {
+    background: #2c3e50;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 8px;
+    text-align: left;
+    transition: transform 0.2s;
+}
+
+.job-card:hover {
+    transform: scale(1.03);
+}
+
+a {
+    color: #00c6ff;
+    text-decoration: none;
+}

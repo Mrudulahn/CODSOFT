@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Job Recommendation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h2>💼 Job Recommendation System</h2>
+
+    <form method="POST">
+        <input type="text" name="skills" placeholder="Enter skills (Python, Java, ML)" required>
+        <button type="submit">Find Jobs</button>
+    </form>
+
+    {% if jobs %}
+    <h3>Recommended Jobs</h3>
+
+    {% for job in jobs %}
+    <div class="job-card">
+        <h4>{{ job.title }}</h4>
+        <p><b>Company:</b> {{ job.company }}</p>
+        <p><b>Location:</b> {{ job.location }}</p>
+        <a href="{{ job.redirect_url }}" target="_blank">Apply Now</a>
+    </div>
+    {% endfor %}
+
+    {% endif %}
+
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
